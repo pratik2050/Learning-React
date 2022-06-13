@@ -4,6 +4,7 @@ import Greet from './components/Greet';
 import Welcome from './components/Welcome';
 import Hello from './components/Hello';
 import JSXHello from './components/HelloJSX';
+import ProjectsSection from './components/ProjectSection';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Welcome/>
       <Hello/>
       <JSXHello/>
+      <ProjectsSection></ProjectsSection>
     </div>
   );
 }
