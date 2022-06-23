@@ -8,9 +8,9 @@ import AddTodo from './components/AddTodo';
 function App() {
   let initTodo;
   if (localStorage.getItem("todos") === null) {
-    initTodo = [];
+    initTodo = []; 
   } else {
-    initTodo = JSON.parse(localStorage.getItem("todo"));
+    initTodo = JSON.parse(localStorage.getItem("todos"));
   }
 
   const onDelete = (todo) => {
@@ -23,7 +23,7 @@ function App() {
   }
 
 
-  const addTodo = (title, desc) =>{
+  const addTodo = (title, desc) => {
     let sno;
 
     if (todos.length === 0) {
@@ -35,7 +35,7 @@ function App() {
     const myTodo = {
       sno: sno,
       title: title,
-      desc: desc
+      desc: desc,
     }
 
     setTodos([...todos, myTodo]);
@@ -46,7 +46,8 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
+  }, [todos]) 
+  
 
   return (
     <div className="App">
